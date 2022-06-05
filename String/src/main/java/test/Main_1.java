@@ -42,7 +42,8 @@ public class Main_1 {
     }
 
     private String makeDName(String email) {
-        return email.substring(email.indexOf('@'));
+
+        return email.substring(email.indexOf("@") +1);
     }
 
     private String makeLocalName(String email) {
@@ -56,14 +57,21 @@ public class Main_1 {
             if(email.charAt(i) == '+' || email.charAt(i) == '@'){
                 break;
             }
-            sb.append(i);
+            sb.append(email.charAt(i));
         }
         return sb.toString();
     }
 
     //3. solve_split
     public int solve_split(String[] emails) {
-        return 0;
+        Set<String> set = new HashSet<>();
+
+        for(String email : emails){
+            String[] parts = email.split("@");
+            String[] localName = parts[0].split("\\+");
+            set.add(localName[0].replace(".","")+"@"+parts[1]);
+        }
+        return set.size();
     }
 
 }
