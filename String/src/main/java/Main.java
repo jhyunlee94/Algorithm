@@ -43,6 +43,7 @@ public class Main {
     }
 
     private String makeDName(String email) {
+
         return email.substring(email.indexOf("@"));
     }
 

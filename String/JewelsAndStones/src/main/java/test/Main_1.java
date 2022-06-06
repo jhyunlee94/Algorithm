@@ -11,6 +11,7 @@ public class Main_1 {
     }
 
     public static int solve(String jew, String stones){
+        //Character로 하는게 a, A 따로 하나하나 담아야하니까!!
         Set<Character> set = new HashSet<>();
 
         char[] jewArr = jew.toCharArray();
