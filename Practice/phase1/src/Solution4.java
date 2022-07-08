@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution4 {
     public static void main(String[] args) {
         Solution solution = new Solution();
@@ -16,6 +19,7 @@ public class Solution4 {
             for (int i : arr){
                 sum += i;
             }
+
 
             return sum / arr.length; // 평균값 구하기
         }
