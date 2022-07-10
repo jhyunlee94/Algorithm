@@ -17,7 +17,8 @@ public class Solution2 {
                 sb.append("*"); // 그 앞에는 *로 담아두고
             }
 
-            return sb.toString()+phone_number.substring(len-4, len); // 담아둔 상태를 toString()으로 뽑아서 뒷자리 출력
+//            return sb.toString()+phone_number.substring(len-4, len); // 담아둔 상태를 toString()으로 뽑아서 뒷자리 출력
+            return sb.toString()+phone_number.substring(len-4, len);
         }
     }
 }
