@@ -9,7 +9,11 @@ public class _2753 {
         int num = sc.nextInt();
 
         if(num%4==0){
-            if(num%100==0 && num%400==0){
+            if(num%400==0){
+                System.out.println("1");
+            } else if(num%100==0){
+                System.out.println("0");
+            } else {
                 System.out.println("1");
             }
         }else {
