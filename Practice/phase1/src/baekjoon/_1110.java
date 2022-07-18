@@ -6,16 +6,16 @@ public class _1110 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int cnt=0;
-        int n = sc.nextInt();
-        int temp = n;
+        int num = sc.nextInt();
+        int temp = num;
+        int cnt = 0;
         while (true) {
             int left = temp/10;
             int right = temp%10;
+            temp = right*10 + (left+right) % 10;
 
-            temp = right * 10 + (left+right)%10;
             cnt++;
-            if(n == temp) {
+            if(num == temp) {
                 System.out.println(cnt);
                 break;
             }
